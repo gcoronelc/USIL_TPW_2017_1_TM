@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--  <link rel="stylesheet" href="CSS/stilos.css">  -->
+        <style type="text/css">
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                margin: 0;
+                font-family: serif;
+            }
+            .formulario{
+                background: aqua;
+                font-family: initial;
+                color: blue;
+                width: 95%;
+                max-width: 300px;
+                margin: auto;
+                margin-top: 10px;
+            }
+            .tabla{
+                background: background;
+                width: 100%;
+                padding: 5px;
+            }
+            .textoF{
+                padding: 5px 10px;
+                width: 25%;
+                font-size: 20px;
+                color: aqua;
+                text-align: center;
+                font-weight: bold;
+
+            }
+            .cajaT{
+                padding-left: 5px;
+                padding-right: 5px;
+                width: 170px;
+                max-width: 250px;
+                font-size: 20px; 
+            }
+            h1{
+                margin: 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-align: center;
+                font-size: 18px;                
+            }
+            td{
+                text-align: right;
+            }
+            .btn{
+                margin: 0;
+                margin-top: 5px;
+                padding:5px 10px;
+                border: 0;
+                text-decoration: none;
+                font-size: 12px;
+                font-family: sans-serif;
+                background: red;
+                color: aliceblue;
+                font-weight: bold;
+                cursor: pointer;
+            }
+           
+
+        </style>
+    </head>
+    <body>
+    <center>
+        <form method="post" action="promController" class="formulario">
+            <!-- 
+            <div>
+                <label>nota 1:</label>
+                <input type="text" name="n1" />
+            </div>
+            <div>
+                <label>nota 2:</label>
+                <input type="text" name="n2" />
+            </div>
+            <div>
+                <label>nota 3:</label>
+                <input type="text" name="n3" />
+            </div>
+            <div>
+               <input type="submit" value="Procesar" /> 
+            </div>
+            -->
+             
+            <table class="tabla">
+                <h1>Promedio de 3 notas</h1>
+                <tr>
+                    <td><label class="textoF">nota 1:</label></td>
+                    <td><input type="text" name="n1" class="cajaT" /></td>
+                </tr>
+                <tr>
+                    <td><label class="textoF" >nota 2:</label></td>
+                    <td><input type="text" name="n2" class="cajaT" /></td>
+                </tr>
+                <tr>
+                    <td><label class="textoF">nota 3:</label></td>
+                    <td><input type="text" name="n3" class="cajaT" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Procesar" class="btn"/></td>
+                </tr>
+            </table>
+            
+        </form>
+        </center>
+    </body>
+</html>

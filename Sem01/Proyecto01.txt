@@ -1,1 +1,6 @@
 Calcular la suma de dos números.
+
+Calcular el promedio de un estudiante.
+5 notas. se elimina la menor.
+
+

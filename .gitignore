@@ -5,3 +5,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Sem02/apptrabajo/build/
+/Sem02/PromedioJAVAWEB/dist/
+/Sem02/AprendiendoSpring/nbproject/private/
+/Sem02/AprendiendoSpring/build/
