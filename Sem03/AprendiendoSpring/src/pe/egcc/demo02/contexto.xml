@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+  
+  <bean id="appService" class="pe.egcc.demo02.AppService" />
+  
+  <bean id="appController" class="pe.egcc.demo02.AppController">
+    <property name="service" ref="appService" />
+  </bean>
+  
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
