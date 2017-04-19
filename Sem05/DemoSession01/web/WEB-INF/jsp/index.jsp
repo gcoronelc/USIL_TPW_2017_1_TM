@@ -15,10 +15,10 @@
         <a href="agregar.htm" target="destino">Agregar Ciudad</a>
       </div>
       <div style="margin: 5px; padding: 5px; display: inline-block;">
-        <a href="#">Mostrar Lista</a>
+        <a href="listar.usil" target="destino">Mostrar Lista</a>
       </div>
       <div style="margin: 5px; padding: 5px; display: inline-block;">
-        <a href="#">Limpiar Lista</a>
+        <a href="limpiar.htm" target="destino">Limpiar Lista</a>
       </div>
     </div>
     <iframe name="destino" width="800px" height="600px;" 

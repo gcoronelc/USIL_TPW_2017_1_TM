@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,14 @@
       <input type="text" name="ciudad" />
       <input type="submit" value="Procesar" />
     </form>
+    
+    <c:if test="${mensaje != null}">
+    <div style="margin: 10px; padding: 15px; 
+         color: blue; background-color: #95a5a6;">
+      ${mensaje}
+    </div>
+    </c:if>
+    
     
   </body>
 </html>
