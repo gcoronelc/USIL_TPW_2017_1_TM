@@ -1,4 +1,4 @@
-/*-----------------LEER LOS COMENTARIOS SI QUIERES APRENDER IMBESIL
+/*-----------------
 
  para crear todo esto hacer clic derecho dentro del paquete CONTROLLER y  crear un -Servlet 
 -------------------------
