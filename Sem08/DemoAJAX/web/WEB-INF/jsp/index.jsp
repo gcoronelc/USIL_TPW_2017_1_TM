@@ -31,7 +31,6 @@
     <script>
       
       function fnCargaPagina(pagina){
-        alert(pagina);
         $("#panel").load(pagina);
       }
       
