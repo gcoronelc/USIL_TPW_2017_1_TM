@@ -3,15 +3,21 @@ package pe.egcc.app.controller;
 import com.google.gson.Gson;
 import java.util.HashMap;
 import java.util.Map;
-import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import pe.egcc.app.model.PromedioModel;
+import pe.egcc.app.service.AppService;
 
 @Controller
 public class AppController {
+  
+  @Autowired
+  private AppService appService;
   
   @RequestMapping(value = "index.htm", method = RequestMethod.GET)
   public String home(){
@@ -47,7 +53,21 @@ public class AppController {
     return repoJSON;
   }
   
+  @RequestMapping(value = "/promedio.htm", 
+          method = RequestMethod.POST,  produces="text/plain")
+  @ResponseBody
+  public String promedio(
+          @ModelAttribute PromedioModel promedioModel
+  ){
+
+    // Proceso
+    promedioModel = appService.promediar(promedioModel);
+    // Reporte
+    Gson gson = new Gson();
+    String repoJSON = gson.toJson(promedioModel);
+    return repoJSON;
+  }
   
   
-  
+ 
 }
