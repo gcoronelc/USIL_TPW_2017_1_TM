@@ -8,7 +8,7 @@
   <body>
     <h2>PROMEDIO DE NOTAS</h2>
     <div>
-      <form>
+      <form id="form1">
         <div>
           <fieldset class="cajaControles">
             <legend>Practicas</legend>
@@ -42,9 +42,33 @@
           </fieldset>
         </div>
         <div style="clear: both;">
-          <input class="botonProcesar" type="button" value="Procesar" />
+          <input class="botonProcesar" id="btnProcesar" type="button" value="Procesar" />
         </div>
       </form>
     </div>
+    
+    <div id="divReporte">
+      <h2>REPORTE</h2>
+      <table>
+        <tbody id="cuerpoReporte"></tbody>
+      </table>
+    </div>
+    
+    <script>
+      
+      $("#btnProcesar").click(fnProcesar);
+      
+      function fnProcesar(){
+        // Datos
+        var data = $("#form1").serialize();
+        // Proceso
+        $.post("promedio.htm",data,function(rpta){
+          alert(rpta)
+        });
+      }
+      
+    </script>
+    
+    
   </body>
 </html>
