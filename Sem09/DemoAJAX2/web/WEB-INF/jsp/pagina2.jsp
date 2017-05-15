@@ -50,7 +50,7 @@
     <div id="divReporte">
       <h2>REPORTE</h2>
       <table>
-        <tbody id="cuerpoReporte"></tbody>
+        <tbody id="cuerpoTabla"></tbody>
       </table>
     </div>
     
@@ -63,8 +63,25 @@
         var data = $("#form1").serialize();
         // Proceso
         $.post("promedio.htm",data,function(rpta){
-          alert(rpta)
+          var obj = $.parseJSON(rpta);
+          $("#cuerpoTabla").empty();
+          fnAddRow("Practica 1:", obj.pract1);
+          fnAddRow("Practica 2:", obj.pract2);
+          fnAddRow("Practica 3:", obj.pract3);
+          fnAddRow("Practica 4:", obj.pract4);
+          fnAddRow("Examen parcial:", obj.exaParcial);
+          fnAddRow("Examen Final:", obj.exaFinal);
+          fnAddRow("Practica menor:", obj.practMenor);
+          fnAddRow("Promedio practicas:", obj.promPract);
+          fnAddRow("Promedio final:", obj.promFinal);
+          fnAddRow("Estado", obj.estado);
         });
+      }
+      
+      function fnAddRow(etiqueta, dato){
+        var newRow = "<tr><td>" + etiqueta + "</td>";
+        newRow = newRow + "<td>" + dato + "</td></tr>";
+        $("#cuerpoTabla").append(newRow);
       }
       
     </script>
