@@ -1,0 +1,27 @@
+.boton{
+  background-color: crimson;
+  color: white;
+  margin: 15px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.cajaControles{
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  float: left;
+}
+
+.botonProcesar{
+  background-color: cornflowerblue;
+  color: white;
+  margin: 15px;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+}
