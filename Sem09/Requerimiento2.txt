@@ -1,0 +1,8 @@
+Desarrollar una pagina para
+calcular el promedio de un 
+estudiante de TPW.
+
+Son 4 practicas, se promedian las 3 mejores.
+
+También hay un examen parcial y un
+examen final.

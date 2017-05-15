@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/src/java/pe/egcc/app/model/PromedioModel.java</file>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/web/WEB-INF/jsp/pagina2.jsp</file>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/web/WEB-INF/jsp/index.jsp</file>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/web/css/estilos.css</file>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/src/java/pe/egcc/app/controller/AppController.java</file>
+            <file>file:/D:/EGCC/Git/USIL_TPW_2017_1_TM/Sem09/DemoAJAX2/src/java/pe/egcc/app/service/AppService.java</file>
+        </group>
     </open-files>
 </project-private>
