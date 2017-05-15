@@ -18,6 +18,6 @@
 
   <context:annotation-config />
   
-  <!-- context:component-scan base-package="service" /-->
+  <context:component-scan base-package="pe.egcc.app.service" />
 
 </beans>

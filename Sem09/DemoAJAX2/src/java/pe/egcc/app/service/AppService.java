@@ -11,6 +11,7 @@ public class AppService {
       // Tarea para ustedes
       
       promedioModel.setPromFinal(100);
+      promedioModel.setEstado("Sano");
       
       
       return promedioModel;
