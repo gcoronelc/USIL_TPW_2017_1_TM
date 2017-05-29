@@ -1,0 +1,44 @@
+1.- Consultar clientes por paterno,
+    matero y nombre.
+	
+2.- Consultar los movimientos de
+    una cuenta.
+
+3.- Consultar las cuentas de una sucursal.
+
+4.- Consultar los movimientos registrados
+    por un empleado.
+	
+5.- Consultar el resumen de movimiento 
+    de una sucursal.
+
+    Sucursal: ### - AAAAAAAAAA
+    Moneda:   01 - SOLES	
+	
+	codigo   Nombre                Cantidad  Importe
+     001     Apertura de Cuenta    ###       #,###.##
+     002     Cancelar Cuenta       ###       #,###.##
+     003     Deposito              ###       #,###.##
+     004     Retiro                ###       #,###.##
+     005     Interes               ###       #,###.##
+     006     Mantenimiento         ###       #,###.##
+     007     ITF                   ###       #,###.##
+     008     Transferencia         ###       #,###.##
+     009     Transferencia         ###       #,###.##
+     010     Cargo por Movimiento  ###       #,###.##
+
+6.- El saldo en cada sucursal, tanto en soles como en dolares.
+
+	codigo   nombre        moneda         saldo
+    001      Sipan         01 - Soles     #,###.##
+	001      Sipan         02 - Dolares   #,###.##
+    002      Chan Chan     01 - Soles     #,###.##
+	002      Chan Chan     02 - Dolares   #,###.##
+    003      Los Olivos    01 - Soles     #,###.##
+	003      Los Olivos    02 - Dolares   #,###.##
+    004      Pardo         01 - Soles     #,###.##
+    005      Misti         01 - Soles     #,###.##
+    006      Machupicchu   01 - Soles     #,###.##
+    007      Grau          01 - Soles     #,###.##
+
+

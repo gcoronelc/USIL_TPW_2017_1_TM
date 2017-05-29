@@ -29,6 +29,7 @@ public class ClienteController {
     List<Map<String,Object>> lista;
     lista = clienteService.conClientes(criterio);
     // Reporte
+    model.addAttribute("criterio", criterio);
     model.addAttribute("lista", lista);
     return "conClientes1";
   }

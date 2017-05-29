@@ -17,7 +17,8 @@
           <tr>
             <td>
               <label>Paterno, Materno o Nombre</label><br/>
-              <input type="text" name="criterio" size="40"/>
+              <input type="text" name="criterio" 
+                     size="40" value="${criterio}"/>
             </td>
             <td>
               <input class="btnMain" type="submit" value="Consultar" />
@@ -26,6 +27,8 @@
         </table>
       </form>
     </div>
+    
+    <c:if test="${not empty lista}">
     <div style="margin: 10px;">
       <h2>REPORTE</h2>
       <table border="1">
@@ -49,5 +52,7 @@
         </tbody>
       </table>
     </div>
+    </c:if>
+    
   </body>
 </html>
