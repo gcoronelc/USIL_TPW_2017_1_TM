@@ -7,7 +7,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome to Spring Web MVC project</title>
-    <link href="<c:url value="/css/estilos.css" />" rel="stylesheet" type="text/css"/>
+    <link href="<c:url value="/css/estilos.css" />" 
+          rel="stylesheet" type="text/css"/>
   </head>
 
   <body>

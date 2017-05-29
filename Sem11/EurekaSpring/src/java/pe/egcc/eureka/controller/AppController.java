@@ -26,5 +26,4 @@ public class AppController {
     return "generales";
   }
 
-  
 }
