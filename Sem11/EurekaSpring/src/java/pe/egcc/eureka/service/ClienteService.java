@@ -66,6 +66,32 @@ public class ClienteService extends AbstractJdbcSupport {
             criterio, criterio, criterio);
     return lista;
   }
+  
+  /**
+   * Consultar clñientes.
+   *
+   * @param criterio Puede ser paterno, materno o nombre
+   * @return Lista de clientes usando Bean
+   */
+  public List<Cliente> conClientes3(String sucursal) {
+    List<Cliente> lista = null;
+    String sql = "select \n"
+            + "chr_cliecodigo      codigo,\n"
+            + "vch_cliepaterno     paterno,\n"
+            + "vch_cliematerno     materno,\n"
+            + "vch_clienombre      nombre,\n"
+            + "chr_cliedni         dni,\n"
+            + "vch_clieciudad      ciudad,     \n"
+            + "vch_cliedireccion   direccion,\n"
+            + "vch_clietelefono    telefono,\n"
+            + "vch_clieemail       email \n"
+            + "from cliente \n"
+            + "where chr_cliecodigo in "
+            + "( select chr_cliecodigo from cuenta where chr_sucucodigo=? ) ";
+    lista = jdbcTemplate.query(sql, 
+            new BeanPropertyRowMapper(Cliente.class), sucursal);
+    return lista;
+  }
 
   
   public Cliente getCliente(String codigo){

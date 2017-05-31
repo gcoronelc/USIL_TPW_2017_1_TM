@@ -9,13 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import pe.egcc.eureka.model.Cliente;
+import pe.egcc.eureka.model.Combo;
 import pe.egcc.eureka.service.ClienteService;
+import pe.egcc.eureka.service.ComboService;
 
 @Controller
 public class ClienteController {
   
   @Autowired
   private ClienteService clienteService;
+  
+  @Autowired
+  private ComboService comboService;
   
   @RequestMapping(value = "conClientesV1.htm", method = RequestMethod.GET)
   public String conClienteV1(Model model){
@@ -94,4 +99,40 @@ public class ClienteController {
     model.addAttribute("lista", lista);
     return "conClientes2";
   }
+  
+  @RequestMapping(value = "conClientesV3.htm", method = RequestMethod.GET)
+  public String conClienteV3(Model model){
+    
+    // Proceso Caso 1
+    List<Combo> sucursales;
+    sucursales = comboService.getSucursales();
+   
+    // Reporte
+    model.addAttribute("sucursales", sucursales);
+    model.addAttribute("menuClientes3", "cssLinkMenuActivo");
+    return "conClientes3";
+  }
+  
+  @RequestMapping(value = "conClientesV3.htm", method = RequestMethod.POST)
+  public String conClienteV3(
+          @RequestParam("sucursal") String sucursal,
+          Model model){
+       
+    // Proceso
+    
+    List<Combo> sucursales;
+    sucursales = comboService.getSucursales();
+    
+    List<Cliente> lista;
+    lista = clienteService.conClientes3(sucursal);
+    
+    
+    // Reporte
+    model.addAttribute("menuClientes3", "cssLinkMenuActivo");
+    model.addAttribute("criterio", sucursal);
+    model.addAttribute("sucursales", sucursales);
+    model.addAttribute("lista", lista);
+    return "conClientes3";
+  }
+  
 }
