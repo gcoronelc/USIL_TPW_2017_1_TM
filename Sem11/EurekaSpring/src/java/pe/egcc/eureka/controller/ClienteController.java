@@ -55,4 +55,43 @@ public class ClienteController {
     }
     return "cliente";
   }
+  
+  @RequestMapping(value = "conClientesV2.htm", method = RequestMethod.GET)
+  public String conClienteV2(Model model){
+    
+    // Proceso Caso 1
+    List<Map<String,Object>> lista;
+    lista = clienteService.conClientes1("");
+    
+    // Proceso Caso 2
+    // List<Cliente> lista;
+    // lista = clienteService.conClientes2("");
+    
+    // Reporte
+    model.addAttribute("lista", lista);
+    model.addAttribute("menuClientes2", "cssLinkMenuActivo");
+    return "conClientes2";
+  }
+  
+  @RequestMapping(value = "conClientesV2.htm", method = RequestMethod.POST)
+  public String conClienteV2(
+          @RequestParam("criterio") String criterio,
+          Model model){
+    
+
+    // Proceso Caso 1
+    // List<Map<String,Object>> lista;
+    // lista = clienteService.conClientes1(criterio);
+    
+    // Proceso Caso 2
+    List<Cliente> lista;
+    lista = clienteService.conClientes2(criterio);
+    
+    
+    // Reporte
+    model.addAttribute("menuClientes2", "cssLinkMenuActivo");
+    model.addAttribute("criterio", criterio);
+    model.addAttribute("lista", lista);
+    return "conClientes2";
+  }
 }
