@@ -27,7 +27,7 @@ public class ClienteController {
           Model model){
     // Proceso
     List<Map<String,Object>> lista;
-    lista = clienteService.conClientes(criterio);
+    lista = clienteService.conClientes1(criterio);
     // Reporte
     model.addAttribute("criterio", criterio);
     model.addAttribute("lista", lista);
