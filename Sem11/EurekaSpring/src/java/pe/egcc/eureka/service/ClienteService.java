@@ -3,6 +3,7 @@ package pe.egcc.eureka.service;
 import java.util.List;
 import java.util.Map;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Service;
 import pe.egcc.eureka.mapper.ClienteMapper;
 import pe.egcc.eureka.model.Cliente;
@@ -60,7 +61,9 @@ public class ClienteService extends AbstractJdbcSupport {
             + "or    vch_cliematerno   like ? \n"
             + "or    vch_clienombre    like ?";
     criterio = "%" + criterio.trim() + "%";
-    //lista = jdbcTemplate.queryForList(sql, criterio, criterio, criterio);
+    lista = jdbcTemplate.query(sql, 
+            new BeanPropertyRowMapper(Cliente.class), 
+            criterio, criterio, criterio);
     return lista;
   }
 
