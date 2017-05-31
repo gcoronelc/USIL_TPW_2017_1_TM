@@ -9,6 +9,17 @@
   padding: 10px;
 }
 
+.cssLinkMenuActivo{
+  background-color: blueviolet;
+  color: antiquewhite;
+  height: 20px;
+  text-decoration: none;
+  display: inline-block;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+}
+
 .cssMenuBar{
   background-color: beige;
 }
@@ -19,4 +30,10 @@
   padding: 15px;
 }
 
+.cssMsgError{
+  background-color: sienna;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
 

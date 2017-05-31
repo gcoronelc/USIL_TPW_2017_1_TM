@@ -13,6 +13,6 @@
 
   <body>
     <h1>PAGINA PRINCIPAL</h1>
-    <jsp:include page="cabecera.jsp" />
+    <jsp:include page="menu.jsp" />
   </body>
 </html>

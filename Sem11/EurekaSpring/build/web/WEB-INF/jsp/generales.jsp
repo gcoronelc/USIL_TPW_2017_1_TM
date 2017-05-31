@@ -10,9 +10,13 @@
   </head>
   <body>
     <h1>CONSULTAS GENERALES</h1>
-    <jsp:include page="cabecera.jsp" />
+    <jsp:include page="menu.jsp" />
+    
+    
     <div>Cantidad de cuentas: ${cantCuentas}</div>
     <div>Saldo en soles: ${saldoSoles}</div>
     <div>Saldo en dolares: ${saldoDolares}</div>
+    
+    
   </body>
 </html>
