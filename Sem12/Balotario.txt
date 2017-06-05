@@ -1,0 +1,99 @@
+1.- Consultar clientes por paterno,
+    matero y nombre.
+	
+	Criterios de busqueda:
+	  . Apellido paterno
+	  . Apellido materno
+	  . Nombre 
+	
+	El resultado debe mostrar todas las columas del cliente.
+	
+	
+2.- Consultar los movimientos de una cuenta.
+
+	El criterio de busqueda es el número de cuenta.
+	
+	Debe mostrar los siguientes campos:
+	
+		. Número de movimiento
+		. Fecha de movimiento
+		. Nombre del empleado 
+		. Tipo de movimiento (codigo y descripción)
+		. Importe del movimiento
+
+3.- Consultar las cuentas de una sucursal.
+
+	El criterio de busqueda es:
+	
+		. código de la sucursal
+		
+	El resultado de mostrar
+	
+		. Número de cuenta
+		. Cliente (código y nombre completo)
+		. Moneda (codigo y descripcion)
+		. Saldo
+		. Estado
+		. Cantidad de movimientos
+		
+
+4.- Consultar los movimientos registrados por un empleado.
+	
+	El criterio de busqueda es el codigo del empleado.
+	
+	El resultado mdebe mostrar:
+	
+		. Número de cuenta
+		. Número de movimiento
+		. Fecha del movimiento
+		. Moneda (codigo y descripcion)
+		. Tipo de movimiento (codigo y descripción)
+		. Importe del movimiento
+
+		
+5.- Consultar el resumen de movimiento 
+    de una sucursal.
+
+	Critero de Busqueda
+	---------------------------------------------------
+	
+	Código de la sucursal
+	
+	Resultado
+	---------------------------------------------------
+	
+    Sucursal: ### - AAAAAAAAAA
+    Moneda:   01 - SOLES	
+
+	
+	codigo   Nombre                Cantidad  Importe
+     001     Apertura de Cuenta    ###       #,###.##
+     002     Cancelar Cuenta       ###       #,###.##
+     003     Deposito              ###       #,###.##
+     004     Retiro                ###       #,###.##
+     005     Interes               ###       #,###.##
+     006     Mantenimiento         ###       #,###.##
+     007     ITF                   ###       #,###.##
+     008     Transferencia         ###       #,###.##
+     009     Transferencia         ###       #,###.##
+     010     Cargo por Movimiento  ###       #,###.##
+
+	 
+6.- El saldo en cada sucursal, tanto en soles como en dolares.
+	Se debe mostrar todas las sucursales.
+	Por cada sucursal se debe mostrar dos filas.
+
+	codigo   nombre        moneda         saldo
+	-------------------------------------------------------
+    001      Sipan         01 - Soles     #,###.##
+	001      Sipan         02 - Dolares   #,###.##
+    002      Chan Chan     01 - Soles     #,###.##
+	002      Chan Chan     02 - Dolares   #,###.##
+    003      Los Olivos    01 - Soles     #,###.##
+	003      Los Olivos    02 - Dolares   #,###.##
+    004      Pardo         01 - Soles     #,###.##
+    005      Misti         01 - Soles     #,###.##
+    006      Machupicchu   01 - Soles     #,###.##
+    007      Grau          01 - Soles     #,###.##
+
+
