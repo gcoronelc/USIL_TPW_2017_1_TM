@@ -10,7 +10,9 @@
   </head>
   <body>
     <h1>CONSULTAR CLIENTES V1</h1>
-    <jsp:include page="cabecera.jsp" />
+    <jsp:include page="menu.jsp" />
+    
+    
     <div style="margin: 10px;">
       <form method="post" action="conClientesV1.htm">
         <table>

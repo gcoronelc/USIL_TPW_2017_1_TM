@@ -20,6 +20,9 @@ public class AppController {
   
   @RequestMapping(value = "generales.htm", method = RequestMethod.GET)
   public String generales(Model model){
+    
+    model.addAttribute("menuGeneral", "cssLinkMenuActivo");
+    
     model.addAttribute("cantCuentas", cuentaService.getCantCuentas());
     model.addAttribute("saldoSoles", cuentaService.getSaldoTotal("01"));
     model.addAttribute("saldoDolares", cuentaService.getSaldoTotal("02"));
