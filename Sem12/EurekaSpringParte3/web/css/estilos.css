@@ -37,3 +37,9 @@
   padding: 10px;
 }
 
+.form-field{
+  width: 160px;
+  padding: 5px;
+  display: inline-block;
+  float: left;
+}

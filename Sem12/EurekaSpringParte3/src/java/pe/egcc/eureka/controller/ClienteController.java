@@ -138,4 +138,30 @@ public class ClienteController {
     return "conClientes3";
   }
   
+  
+  @RequestMapping(value = "crudClientes.htm", method = RequestMethod.GET)
+  public String crudClientes(Model model){
+    
+    
+    model.addAttribute("crudClientes", "cssLinkMenuActivo");
+    
+    return "crudClientes";
+  }
+  
+  @RequestMapping(value = "crudClientesConsultar.htm", method = RequestMethod.POST)
+  public String crudClientesConsultar(
+          @RequestParam("btnBuscar") String buscar,
+          Model model){
+    
+    System.out.println("buscar: " + buscar);
+    
+    String destino = (buscar.equals("Buscar")?"crudClientes":"crudClientesEditar");
+    
+    model.addAttribute("crudClientes", "cssLinkMenuActivo");
+    model.addAttribute("mensaje", "Muy pronto .... en USIL.");
+    
+    return destino;
+  }
+  
+  
 }
