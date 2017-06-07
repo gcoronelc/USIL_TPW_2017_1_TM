@@ -52,5 +52,11 @@
 
 
 
+![TALLER DE PROGRAMACION WEB](https://raw.githubusercontent.com/gcoronelc/USIL_TPW_2017_1_TM/master/Fotos/Foto_06-06-17_02.jpg)
+![TALLER DE PROGRAMACION WEB](https://raw.githubusercontent.com/gcoronelc/USIL_TPW_2017_1_TM/master/Fotos/Foto_06-06-17_03.jpg)
+![TALLER DE PROGRAMACION WEB](https://raw.githubusercontent.com/gcoronelc/USIL_TPW_2017_1_TM/master/Fotos/Foto_06-06-17_05.jpg)
+![TALLER DE PROGRAMACION WEB](https://raw.githubusercontent.com/gcoronelc/USIL_TPW_2017_1_TM/master/Fotos/Foto_06-06-17_12.jpg)
+![TALLER DE PROGRAMACION WEB](https://raw.githubusercontent.com/gcoronelc/USIL_TPW_2017_1_TM/master/Fotos/Foto_06-06-17_15.jpg)
+
 
 
