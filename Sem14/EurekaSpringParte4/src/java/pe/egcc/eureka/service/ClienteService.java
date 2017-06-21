@@ -5,6 +5,8 @@ import java.util.Map;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import pe.egcc.eureka.mapper.ClienteMapper;
 import pe.egcc.eureka.model.Cliente;
 
@@ -98,5 +100,46 @@ public class ClienteService extends AbstractJdbcSupport {
     return lista;
   }
   
+  @Transactional(propagation = Propagation.REQUIRED,
+          rollbackFor = Exception.class)
+  public void crear(Cliente cliente) {
+    // Leer el contador
+    String sql = "select int_contitem cont, int_contlongitud size "
+            + "from contador "
+            + "where vch_conttabla = 'Cliente' "
+            + "for update";
+    Map<String,Object> rec = jdbcTemplate.queryForMap(sql);
+    int cont = Integer.parseInt(rec.get("cont").toString());
+    int size = Integer.parseInt(rec.get("size").toString());
+    
+    System.out.println("CONT: " + cont);
+    
+    try {
+      Thread.currentThread().sleep(2000);
+    } catch (Exception e) {
+    }
+    
+    // Generar Codigo
+    cont++;
+    String codigo = String.format("%" + size + "s", cont).replace(' ', '0' );
+    
+    // Actualizar el contador
+    sql = "update contador set int_contitem = ? "
+            + "where vch_conttabla = 'Cliente'";
+    jdbcTemplate.update(sql, cont);
+    
+    // Insertar cliente
+    sql = "insert into cliente(chr_cliecodigo,vch_cliepaterno,"
+            + "vch_cliematerno,vch_clienombre,chr_cliedni,"
+            + "vch_clieciudad,vch_cliedireccion,"
+            + "vch_clietelefono,vch_clieemail) "
+            + "values(?,?,?,?,?,?,?,?,?)";
+    jdbcTemplate.update(sql, codigo, cliente.getPaterno(), cliente.getMaterno(),
+            cliente.getNombre(),cliente.getDni(),cliente.getCiudad(),
+            cliente.getDireccion(),cliente.getTelefono(),cliente.getEmail());
+    
+    cliente.setCodigo(codigo);
+    
+  }
   
 }

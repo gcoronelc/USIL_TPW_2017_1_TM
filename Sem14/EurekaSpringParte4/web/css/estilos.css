@@ -37,6 +37,20 @@
   padding: 10px;
 }
 
+.cssMsgInfo{
+  background-color: activeborder;
+  color: indigo;
+  margin: 10px;
+  padding: 10px;
+}
+
+.form-label{
+  width: 100px;
+  padding: 5px;
+  display: inline-block;
+
+}
+
 .form-field{
   width: 160px;
   padding: 5px;

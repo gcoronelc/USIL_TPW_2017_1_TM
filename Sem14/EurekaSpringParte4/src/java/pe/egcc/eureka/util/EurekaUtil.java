@@ -4,6 +4,15 @@ import java.util.List;
 import pe.egcc.eureka.model.Combo;
 
 public final class EurekaUtil {
+  
+  
+  // CONSTANTES DEL CRUD
+  
+  public static final String CRUD_NUEVO = "NUEVO";
+  public static final String CRUD_EDITAR = "EDITAR";
+  public static final String CRUD_ELIMINAR = "ELIMINAR";
+  
+  
 
   private EurekaUtil() {
   }
