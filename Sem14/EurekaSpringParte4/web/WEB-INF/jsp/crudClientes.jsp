@@ -73,8 +73,8 @@
             
             <tr>
               <td>
-                <a href="#">E</a>
-                <a href="#">D</a>
+                <a href="crudClienteEditar.htm?codigo=${r.codigo}">E</a>
+                <a href="crudClienteEliminar.htm?codigo=${r.codigo}">D</a>
               </td>
               <td>${r.codigo}</td>
               <td>${r.paterno}</td>

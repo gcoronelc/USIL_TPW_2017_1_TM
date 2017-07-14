@@ -138,6 +138,10 @@ public class ClienteController {
     model.addAttribute("lista", lista);
     return "conClientes3";
   }
+
+  /*
+  INICIO DEL CRID
+  */
   
   
   @RequestMapping(value = "crudClientes.htm", method = RequestMethod.GET)
@@ -147,7 +151,7 @@ public class ClienteController {
     model.addAttribute("crudClientes", "cssLinkMenuActivo");
     
     return "crudClientes";
-  }
+  } 
   
   @RequestMapping(value = "crudClientesConsultar.htm", method = RequestMethod.POST)
   public String crudClientesConsultar(
@@ -165,12 +169,95 @@ public class ClienteController {
       model.addAttribute("lista", lista);
       
     } else {
+      
+      Cliente beanCliente = new Cliente();
+      beanCliente.setCodigo(EurekaUtil.CRUD_NUEVO);
+      
       destino = "crudClientesEditar";
-      model.addAttribute("accion", "NUEVO");
+      model.addAttribute("accion", EurekaUtil.CRUD_NUEVO);
+      model.addAttribute("bean", beanCliente);
+      
     }
     
     return destino;
   }
+  
+  @RequestMapping(value = "crudClienteEditar.htm", method = RequestMethod.GET)
+  public String crudClienteEditar(
+          @RequestParam("codigo") String codigo,
+          Model model){
+    
+    String destino;
+    model.addAttribute("crudClientes", "cssLinkMenuActivo");
+    
+    // Proceso
+    Cliente beanCliente = clienteService.getCliente(codigo);
+    
+    // Reporte
+    destino = "crudClientesEditar";
+    model.addAttribute("accion", EurekaUtil.CRUD_EDITAR);
+    model.addAttribute("bean", beanCliente);
+    
+    return destino;
+  }
+  
+  @RequestMapping(value = "crudClienteEliminar.htm", method = RequestMethod.GET)
+  public String crudClienteEliminar(
+          @RequestParam("codigo") String codigo,
+          Model model){
+    
+    String destino;
+    model.addAttribute("crudClientes", "cssLinkMenuActivo");
+    
+    // Proceso
+    Cliente beanCliente = clienteService.getCliente(codigo);
+    
+    // Reporte
+    destino = "crudClientesEditar";
+    model.addAttribute("accion", EurekaUtil.CRUD_ELIMINAR);
+    model.addAttribute("bean", beanCliente);
+    model.addAttribute("disabled", "disabled");
+    
+    
+    return destino;
+  }
+  
+  
+  @RequestMapping(value = "crudClienteGrabar.htm", method = RequestMethod.POST)
+  public String crudClienteGrabar(
+          @RequestParam("accion") String accion,
+          @ModelAttribute Cliente cliente,
+          Model model){
+    
+    String destino;
+    model.addAttribute("crudClientes", "cssLinkMenuActivo");
+    
+    // Proceso
+    String mensaje = "";
+    String error = "";
+    try {
+      switch(accion){
+        case EurekaUtil.CRUD_NUEVO:
+          clienteService.crear(cliente);
+          mensaje = "Cliente creado con código " + cliente.getCodigo() + ".";
+          break;
+          
+          
+      }
+    } catch (Exception e) {
+      error = e.getMessage();
+    }
+        
+    // Reporte
+    destino = "mensaje";
+    model.addAttribute("titulo", accion + " CLIENTE");
+    model.addAttribute("mensaje", mensaje);
+    model.addAttribute("error", error);
+ 
+    
+    return destino;
+  }
+  
   
   
 }
