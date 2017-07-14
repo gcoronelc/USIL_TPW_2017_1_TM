@@ -1,0 +1,77 @@
+.menuBar{
+  background-color: wheat;
+}
+
+.menuItem{
+  background-color: teal;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  float: left;
+  font-size: 14px;
+}
+
+.menuItemActivo{
+  background-color: #2980b9;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+  text-decoration: none;
+  float: left;
+  font-size: 14px;
+}
+
+.btnMain{
+  background-color: #3498db;
+  color: white;
+  height: 40px;
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.btnDefault{
+  background-color: gray;
+  color: white;
+  height: 40px;
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+
+.formLabel{
+	width: 100px;
+	display: inline-block;
+	padding: 3px;
+	margin: 3px;
+}
+
+.formImput{
+  width: 250px;
+  display: inline-block;
+  padding: 3px;
+  margin: 3px;
+}
+
+.cssMsgError{
+  background-color: sienna;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.cssMsgInfo{
+  background-color: activeborder;
+  color: indigo;
+  margin: 10px;
+  padding: 10px;
+}
+
+body{
+	 background-color: #d9dee2;
+}
+
